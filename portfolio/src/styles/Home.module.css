@@ -1,12 +1,34 @@
+.movingGradientBackground {
+  background-image: linear-gradient( -45deg, #ffc75f, #ff9671, #ff6f91, #aea2db, #81c1d9 );
+  background-size: 400%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: initial;
+  animation: movingGradient 15s ease infinite alternate;
+}
+
 .mainContainer{
   display: flex;
   justify-content: center;
   margin: 30px 0 0 0;
+}
 
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+      background-position: 0% 100%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  75% {
+      background-position: 100% 0%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
 }
 
 .infoAboutMe{
@@ -22,58 +44,142 @@
   width: 100%;
 }
 
-.leftBlock{
-  width: 50px;
-  height: 600px;
-  background-color: #EFAE2D;
-  border-radius: 1px;
-}
-
-.rightBlock{
-  width: 50px;
-  height: 600px;
-  background-color: #EFAE2D;
-  border-radius: 1px;
-}
-
 .middleBlock{
   width: 900px;
   height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 0 50px;
+}
+
+.middleBlock > span {
+  color: #738496;
+  margin: 20px 20px 0 20px;
 }
 
 .middleTopBlock{
-  background-color: #08A654;
+  border-radius: 5px;
   width: auto;
   height: 50px;
 }
 
-.middleBottomBlock{
-  background-color: #08A654;
-  width: auto;
-  height: 50px;
-}
+.aboutMeContainer{
+  margin-top: 30px;
 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 
 .connectWithMe > p > a{
   border-radius: 3px;
   padding: 15px 20px;
-  border: 1px solid #08A654;
+  border: 1px solid #999999;
   cursor: pointer;
 }
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #272727;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.inputWrapper {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.inputSpan {
+    display: block;
+    position: relative;
+}
+
+.inputField {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #272727;
+  border-radius: 3px;
+  font-size: 16px;
+  color: grey;
+  background-color: #272727 !important;
+  caret-color: white;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #272727;
+}
+
+.submitButton {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(53, 53, 53);
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    padding: 20px;
+    border: 0;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+}
+
+.buttonWrapper, .buttonInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonText {
+    font-size: 16px;
+}
+
+.errorText{
+  font-weight: 300;
+  color: rgb(196, 15, 15);
+}
+
+.shortenedUrlContainer {
+  background-color: #272727;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.shortenedUrlContainer p {
+  font-size: 15px;
+  margin: 10px;
+  color: #eee;  /* Adjusted for contrast with the dark background */
+  font-weight: 300;
+}
+
+.shortenedUrl {
+  background-color: #adadad;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
 
 @media (max-width: 1100px) {
   .mainContainer {
       align-items: center;
       margin: 20px 0;
-  }
-
-  .leftBlock, .rightBlock {
-      width: 0;
-  }
+  } 
 
   .middleBlock {
       width: 90vw;
@@ -97,10 +203,7 @@
     width: 90vw;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.2s;
-    background-color: #EFAE2D;
     border-radius: 1px;
-    border: 0;
   }
 
   .middleBottomBlock{
