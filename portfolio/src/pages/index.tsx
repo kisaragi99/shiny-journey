@@ -24,9 +24,10 @@ export default function Home() {
             <p className={styles.infoAboutMe}>Specializing in React and TypeScript, I'm committed to crafting seamless web applications that users love. With a passion for web development, I constantly explore new techniques and methodologies to deliver innovative solutions. My goal is to collaborate on projects that drive growth and foster continuous learning.</p>
 
             <div className={styles.connectWithMe}>
-              <p><a href="https://linkedin.com/in/kisaragi99/" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></p>
-              <p><a href="https://ochirengineer.ru/resume" target="_blank" rel="noopener noreferrer">My Resume</a></p>
+              <p><a href="https://linkedin.com/in/kisaragi99" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></p>
+              <p><a href="/resume" target="_blank" rel="noopener noreferrer">My Resume</a></p>
               <p><a href="/linkshortener" target="_blank" rel="noopener noreferrer">Link Shortener</a></p>
+              <p><a href="https://github.com/kisaragi99" target="_blank" rel="noopener noreferrer">Github</a></p>
             </div>
           </div>
         </div>
